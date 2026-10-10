@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Uncle Cruack 🍁🇨🇦</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #7f0000, #d32f2f, #ffffff, #d32f2f, #7f0000);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+    overflow: hidden;
+    position: relative;
+    padding: 20px;
+  }
+  
+  @keyframes gradientMove {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  
+  /* Falling Maple Leaves */
+  .leaf {
+    position: absolute;
+    font-size: 28px;
+    top: -50px;
+    animation: leafFall linear infinite;
+    opacity: 0.9;
+    user-select: none;
+  }
+  
+  @keyframes leafFall {
+    0% { transform: translateY(-50px) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.9; }
+    90% { opacity: 0.9; }
+    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+  }
+  
+  /* Main Card */
+  .card {
+    position: relative;
+    z-index: 10;
+    max-width: 680px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    border: 6px solid #d32f2f;
+    border-radius: 25px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5),
+                0 0 0 4px #ffffff,
+                0 0 0 8px #d32f2f,
+                0 0 100px rgba(211, 47, 47, 0.5);
+    animation: cardAppear 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  
+  @keyframes cardAppear {
+    from { opacity: 0; transform: scale(0.7) translateY(50px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  
+  /* Bear mascot */
+  .bear {
+    font-size: 90px;
+    display: inline-block;
+    animation: bearDance 1.5s ease-in-out infinite;
+    margin-bottom: 5px;
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.3));
+  }
+  
+  @keyframes bearDance {
+    0%, 100% { transform: rotate(-8deg) scale(1); }
+    25% { transform: rotate(0deg) scale(1.08); }
+    50% { transform: rotate(8deg) scale(1); }
+    75% { transform: rotate(0deg) scale(1.08); }
+  }
+  
+  /* Canadian flag row */
+  .flag-row {
+    font-size: 1.8em;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+  }
+  
+  h1 {
+    font-size: 2.3em;
+    color: #d32f2f;
+    margin-bottom: 8px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 0 rgba(255, 255, 255, 0.8),
+                 4px 4px 0 rgba(211, 47, 47, 0.3);
+  }
+  
+  .name {
+    font-size: 3em;
+    font-weight: 900;
+    color: #7f0000;
+    margin: 10px 0;
+    letter-spacing: 1px;
+    text-shadow: 0 0 20px rgba(211, 47, 47, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from { text-shadow: 0 0 15px rgba(211, 47, 47, 0.4); }
+    to { text-shadow: 0 0 25px rgba(211, 47, 47, 0.9), 0 0 40px rgba(255, 215, 0, 0.5); }
+  }
+  
+  .age-badge {
+    display: inline-block;
+    margin: 15px 0 20px;
+    padding: 10px 28px;
+    background: linear-gradient(135deg, #d32f2f, #7f0000);
+    color: white;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1em;
+    box-shadow: 0 8px 25px rgba(211, 47, 47, 0.5);
+    animation: pulse 2s ease-in-out infinite;
+    border: 2px solid white;
+  }
+  
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+  }
+  
+  .message {
+    color: #333;
+    font-size: 1.12em;
+    line-height: 1.8;
+    margin: 20px 0;
+    padding: 22px;
+    border-left: 5px solid #d32f2f;
+    border-right: 5px solid #d32f2f;
+    background: #fff5f5;
+    border-radius: 12px;
+    font-style: italic;
+    position: relative;
+  }
+  
+  .message::before {
+    content: '🍁';
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .divider {
+    height: 3px;
+    width: 140px;
+    margin: 18px auto;
+    background: linear-gradient(90deg, transparent, #d32f2f, transparent);
+    border-radius: 3px;
+    position: relative;
+  }
+  
+  .divider::after {
+    content: '🍁';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 0 8px;
+    font-size: 0.9em;
+  }
+  
+  .date {
+    color: #d32f2f;
+    font-size: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 12px;
+  }
+  
+  .signature {
+    margin-top: 20px;
+    color: #666;
+    font-size: 0.95em;
+    font-style: italic;
+  }
+  
+  .bear-row {
+    font-size: 1.6em;
+    letter-spacing: 8px;
+    margin: 15px 0;
+    animation: wiggle 3s ease-in-out infinite;
+  }
+  
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+  }
+  
+  /* Confetti canvas */
+  #confetti {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 5;
+  }
+  
+  /* Music button */
+  .music-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+    background: #d32f2f;
+    border: 3px solid white;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s;
+  }
+  
+  .music-btn:hover {
+    transform: scale(1.1) rotate(10deg);
+  }
+  
+  /* Snowflake corner deco */
+  .snow-corner {
+    position: fixed;
+    font-size: 40px;
+    opacity: 0.4;
+    z-index: 2;
+  }
+  
+  @media (max-width: 500px) {
+    h1 { font-size: 1.6em; }
+    .name { font-size: 2em; }
+    .card { padding: 30px 18px; }
+    .bear { font-size: 65px; }
+    .message { font-size: 1em; padding: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<canvas id="confetti"></canvas>
+
+<button class="music-btn" id="musicBtn" title="Play Music">🎵</button>
+
+<div class="snow-corner" style="top: 15px; left: 15px;">❄️</div>
+<div class="snow-corner" style="bottom: 15px; left: 15px;">🍁</div>
+<div class="snow-corner" style="bottom: 15px; right: 15px;">❄️</div>
+
+<div class="card">
+  <div class="flag-row">🇨🇦 🍁 🇨🇦</div>
+  <div class="bear">🐻</div>
+  <h1>Happy Birthday</h1>
+  <div class="name">Uncle Cruack</div>
+  <div class="age-badge" id="ageBadge">🎈 Loading... 🎈</div>
+  
+  <div class="bear-row">🐻 🍁 🐻</div>
+  
+  <div class="divider"></div>
+  
+  <div class="message">
+    "Happy Birthday, Uncle Cruack, eh! 🥳🍁<br>
+    From the Great White North all the way to you —<br>
+    wishing you a day as warm as maple syrup and as bright as the Northern Lights.<br>
+    May this year bring you good health, happiness, and plenty of bear hugs! 🐻<br>
+    Thank you for being the kindest, most awesome Uncle anyone could ask for.<br>
+    You're a real Canadian treasure — keep being legendary, eh! 💛"
+  </div>
+  
+  <div class="divider"></div>
+  
+  <div class="date">📅 October 10</div>
+  <div class="signature">— With love & best wishes, eh! 🍁 —</div>
+  
+  <div class="flag-row" style="margin-top: 15px; font-size: 1.4em;">🐻 🇨🇦 🍁 🇨🇦 🐻</div>
+</div>
+
+<script>
+  // ===== Auto age =====
+  const birthDate = new Date(1985, 9, 10);
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const monthDiff = today.getMonth() - birthDate.getMonth();
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+  document.getElementById('ageBadge').textContent = `✨ ${age} Years Young ✨`;
+  
+  // ===== Falling Maple Leaves =====
+  const leafEmojis = ['🍁', '🍁', '🍁', '❄️', '🐻'];
+  for (let i = 0; i < 20; i++) {
+    const leaf = document.createElement('div');
+    leaf.className = 'leaf';
+    leaf.textContent = leafEmojis[Math.floor(Math.random() * leafEmojis.length)];
+    leaf.style.left = Math.random() * 100 + '%';
+    leaf.style.fontSize = (18 + Math.random() * 22) + 'px';
+    leaf.style.animationDuration = (8 + Math.random() * 10) + 's';
+    leaf.style.animationDelay = Math.random() * 12 + 's';
+    document.body.appendChild(leaf);
+  }
+  
+  // ===== Confetti (red + white Canada colors) =====
+  const canvas = document.getElementById('confetti');
+  const ctx = canvas.getContext('2d');
+  let W = canvas.width = window.innerWidth;
+  let H = canvas.height = window.innerHeight;
+  
+  window.addEventListener('resize', () => {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  });
+  
+  const confettiColors = ['#d32f2f', '#ffffff', '#7f0000', '#ffcdd2', '#b71c1c'];
+  const pieces = [];
+  
+  for (let i = 0; i < 130; i++) {
+    pieces.push({
+      x: Math.random() * W,
+      y: Math.random() * H - H,
+      w: 6 + Math.random() * 8,
+      h: 8 + Math.random() * 10,
+      color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
+      speed: 1 + Math.random() * 3,
+      angle: Math.random() * Math.PI * 2,
+      spin: (Math.random() - 0.5) * 0.2,
+      sway: Math.random() * 2 - 1
+    });
+  }
+  
+  function drawConfetti() {
+    ctx.clearRect(0, 0, W, H);
+    pieces.forEach(p => {
+      ctx.save();
+      ctx.translate(p.x, p.y);
+      ctx.rotate(p.angle);
+      ctx.fillStyle = p.color;
+      ctx.fillRect(-p.w/2, -p.h/2, p.w, p.h);
+      ctx.restore();
+      
+      p.y += p.speed;
+      p.x += Math.sin(p.y * 0.01) * p.sway;
+      p.angle += p.spin;
+      
+      if (p.y > H + 20) {
+        p.y = -20;
+        p.x = Math.random() * W;
+      }
+    });
+    requestAnimationFrame(drawConfetti);
+  }
+  drawConfetti();
+  
+  // ===== Happy Birthday melody =====
+  let audioCtx = null;
+  let playing = false;
+  
+  function playMelody() {
+    if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    
+    const notes = [
+      { n: 'G4', d: 0.3 }, { n: 'G4', d: 0.3 }, { n: 'A4', d: 0.5 }, { n: 'G4', d: 0.5 }, { n: 'C5', d: 0.5 }, { n: 'B4', d: 1.0 },
+      { n: 'G4', d: 0.3 }, { n: 'G4', d: 0.3 }, { n: 'A4', d: 0.5 }, { n: 'G4', d: 0.5 }, { n: 'D5', d: 0.5 }, { n: 'C5', d: 1.0 },
+      { n: 'G4', d: 0.3 }, { n: 'G4', d: 0.3 }, { n: 'G5', d: 0.5 }, { n: 'E5', d: 0.5 }, { n: 'C5', d: 0.5 }, { n: 'B4', d: 0.5 }, { n: 'A4', d: 1.0 },
+      { n: 'F5', d: 0.3 }, { n: 'F5', d: 0.3 }, { n: 'E5', d: 0.5 }, { n: 'C5', d: 0.5 }, { n: 'D5', d: 0.5 }, { n: 'C5', d: 1.2 }
+    ];
+    
+    const freq = {
+      'G4': 392.00, 'A4': 440.00, 'B4': 493.88, 'C5': 523.25,
+      'D5': 587.33, 'E5': 659.25, 'F5': 698.46, 'G5': 783.99
+    };
+    
+    let time = audioCtx.currentTime;
+    notes.forEach(note => {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = freq[note.n];
+      gain.gain.setValueAtTime(0, time);
+      gain.gain.linearRampToValueAtTime(0.15, time + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.001, time + note.d);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start(time);
+      osc.stop(time + note.d);
+      time += note.d;
+    });
+    
+    const totalDur = notes.reduce((a, b) => a + b.d, 0) * 1000;
+    if (playing) {
+      setTimeout(() => { if (playing) playMelody(); }, totalDur + 1500);
+    }
+  }
+  
+  document.getElementById('musicBtn').addEventListener('click', function() {
+    if (!playing) {
+      playing = true;
+      this.textContent = '⏸';
+      playMelody();
+    } else {
+      playing = false;
+      this.textContent = '🎵';
+      if (audioCtx) audioCtx.close();
+      audioCtx = null;
+    }
+  });
+</script>
+
+</body>
+  </html>
